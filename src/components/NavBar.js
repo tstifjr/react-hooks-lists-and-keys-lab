@@ -1,9 +1,18 @@
 import React from "react";
 
+function DisplayNav(props){
+
+}
+
 function NavBar() {
   const links = ["home", "about", "projects"];
 
-  return <nav>{/* display an <a> tag for each link here */}</nav>;
+  const displayNav = links.map(link=>{
+    return <a key={link} href= {`#${link}`}>{link}</a>
+  })
+
+  //console.log (displayNav);
+  return <nav>{displayNav}</nav>;
 }
 
 export default NavBar;

@@ -6,10 +6,13 @@ function ProjectItem({ name, about, technologies }) {
       <h3>{name}</h3>
       <p>{about}</p>
       <div className="technologies">
-        {/* render a <span> for each technology in the technologies array */}
+        {renderSpan(technologies)}
       </div>
     </div>
   );
 }
 
+function renderSpan(techArr){
+  return techArr.map(tech =><span key={tech}>{tech}</span>)
+}
 export default ProjectItem;
